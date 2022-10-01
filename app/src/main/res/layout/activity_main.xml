@@ -8,17 +8,6 @@
     android:id="@+id/activityOne"
     android:background="@color/secondaryColor">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1"
-        android:text="Please put your name"
-        android:textSize="25sp"/>
 
     <EditText
         android:id="@+id/input_name"
@@ -28,8 +17,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:ems="15"
-        android:inputType="textPersonName"/>
+        android:ems="12"
+        android:textSize="20sp"
+        android:inputType="textPersonName"
+        android:importantForAutofill="no"
+        android:hint="@string/put_name"
+        android:gravity="center_horizontal"
+        android:background="@drawable/input_bg"
+        />
 
     <Button
         android:id="@+id/input_name_button"
@@ -41,8 +36,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.60"
-        android:text="SUBMIT"
+        android:text="@string/submit"
         android:textColor="@color/black"
-        android:backgroundTint="#1A8FDD"/>
+        android:backgroundTint="@color/darkestBlue"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

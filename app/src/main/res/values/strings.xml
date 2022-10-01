@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">betProject</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="submit">SUBMIT</string>
+    <string name="connect">CONNECT</string>
+    <string name="put_name">Please put your name</string>
+    <string name="put_password">Please put your password</string>
+    <string name="your_bets">Your bets</string>
+    <string name="next_bets">Next bets</string>
+    <string name="my_sold">My sold</string>
+    <string name="leave">Leave app</string>
+
+
 </resources>

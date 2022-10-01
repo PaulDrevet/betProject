@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Your bets"
+    <item android:title="@string/your_bets"
         android:id="@+id/yourBets"
         android:icon="@drawable/ic_baseline_casino_24"/>
-    <item android:title="Next bets"
+    <item android:title="@string/next_bets"
         android:id="@+id/nextBets"
         android:icon="@drawable/ic_baseline_home_24"
         />
-    <item android:title="My money"
+    <item android:title="@string/my_sold"
         android:id="@+id/myMoney"
         android:icon="@drawable/ic_baseline_attach_money_24"/>
 </menu>

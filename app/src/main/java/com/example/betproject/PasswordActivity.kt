@@ -16,7 +16,7 @@ class PasswordActivity : AppCompatActivity() {
         val userPassword: EditText = findViewById(R.id.input_password)
         val userPasswordButton: Button = findViewById(R.id.input_password_button)
 
-        userPasswordButton.setOnClickListener() {
+        userPasswordButton.setOnClickListener {
             val userName = userPassword.text.toString()
             if (userName.isEmpty()) {
                 Toast.makeText(this, "Please put your password", Toast.LENGTH_SHORT).show()

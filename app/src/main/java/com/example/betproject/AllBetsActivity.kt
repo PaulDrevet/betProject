@@ -14,7 +14,7 @@ class AllBetsActivity : AppCompatActivity() {
         binding = ActivityAllBetsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        replaceFragment(NextBets())
+        replaceFragment(YourBets())
 
         binding.bottomNavigationView.setOnItemSelectedListener {
 

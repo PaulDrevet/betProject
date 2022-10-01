@@ -3,13 +3,9 @@ package com.example.betproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.view.Window
-import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,9 +18,9 @@ class MainActivity : AppCompatActivity() {
         val userName:EditText = findViewById(R.id.input_name)
         val userNameButton: Button = findViewById(R.id.input_name_button)
 
-        userNameButton.setOnClickListener(){
-            val userName = userName.text.toString()
-            if (userName.isEmpty()){
+        userNameButton.setOnClickListener{
+            val userNameStr = userName.text.toString()
+            if (userNameStr.isEmpty()){
                 Toast.makeText(this,"Please put your name",Toast.LENGTH_SHORT).show()
             }
             else {
