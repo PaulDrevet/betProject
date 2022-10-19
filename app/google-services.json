@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "630532164899",
+    "project_id": "betproject-9b85a",
+    "storage_bucket": "betproject-9b85a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630532164899:android:8966e3990249006a785096",
+        "android_client_info": {
+          "package_name": "com.example.betproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630532164899-afkfcd6cgrshu4meuov3r8ghlppae6re.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.betproject",
+            "certificate_hash": "92d6c7b6749165d135c1db0f17a11e1814fdee46"
+          }
+        },
+        {
+          "client_id": "630532164899-dqvsgp1d7t36ijeoa4vn5frdde9ro1f8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRVy6QxhyscKf5WK6XLhk8GsGOd3tXIeg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630532164899-dqvsgp1d7t36ijeoa4vn5frdde9ro1f8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
