@@ -1,8 +1,14 @@
-package com.example.betproject
+package com.example.betproject.activitys
 
+import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
+import com.example.betproject.fragments.MyMoney
+import com.example.betproject.fragments.NextBets
+import com.example.betproject.R
+import com.example.betproject.fragments.YourBets
 import com.example.betproject.databinding.ActivityAllBetsBinding
 
 class AllBetsActivity : AppCompatActivity() {
@@ -40,4 +46,5 @@ class AllBetsActivity : AppCompatActivity() {
         fragmentTransaction.commit()
 
     }
+
 }

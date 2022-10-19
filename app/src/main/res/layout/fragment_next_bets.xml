@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NextBets"
+    tools:context=".fragments.NextBets"
     android:id="@+id/nextBets"
     android:background="@color/secondaryColor">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBets"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="nextBets" />
-
+        tools:listitem="@layout/match_preview">
+    </androidx.recyclerview.widget.RecyclerView>
 </FrameLayout>
