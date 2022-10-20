@@ -22,7 +22,7 @@ class PasswordActivity : AppCompatActivity() {
             if (userName.isEmpty()) {
                 Toast.makeText(this, "Please put your password", Toast.LENGTH_SHORT).show()
             } else {
-                val intent = Intent(applicationContext, AllBetsActivity::class.java)
+                val intent = Intent(applicationContext, MainActivity::class.java)
                 startActivity(intent)
             }
         }

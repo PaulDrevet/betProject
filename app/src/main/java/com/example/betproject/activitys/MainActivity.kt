@@ -1,32 +1,25 @@
 package com.example.betproject.activitys
 
-import android.content.ContentValues.TAG
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.betproject.R
+import com.example.betproject.databinding.ActivityAllBetsBinding
 import com.example.betproject.fragments.MyMoney
 import com.example.betproject.fragments.NextBets
-import com.example.betproject.R
 import com.example.betproject.fragments.YourBets
-import com.example.betproject.databinding.ActivityAllBetsBinding
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 
-class AllBetsActivity : AppCompatActivity() {
+
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityAllBetsBinding
-    val db = Firebase.firestore
-    val user = hashMapOf(
-        "first" to "Ada"
-    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityAllBetsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        replaceFragment(YourBets())
+        replaceFragment(NextBets())
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
@@ -43,7 +36,9 @@ class AllBetsActivity : AppCompatActivity() {
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frameLayout, fragment)
+        fragmentTransaction.replace(R.id.frame_layout, fragment)
         fragmentTransaction.commit()
     }
+
+
 }

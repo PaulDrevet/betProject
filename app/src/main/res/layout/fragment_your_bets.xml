@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/secondaryColor"
-    tools:context=".YourBets"
+    tools:context="fragments.YourBets"
     android:id="@+id/yourBets">
 
     <!-- TODO: Update blank fragment layout -->

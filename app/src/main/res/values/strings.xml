@@ -8,6 +8,8 @@
     <string name="next_bets">Next bets</string>
     <string name="my_sold">My sold</string>
     <string name="leave">Leave app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
