@@ -1,9 +1,10 @@
-package com.example.betproject.Models
+package com.example.betproject.models
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.betproject.Repository.UserRepository
+import com.example.betproject.repository.UserRepository
 
 class UserViewModel : ViewModel() {
 

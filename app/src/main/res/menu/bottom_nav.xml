@@ -6,8 +6,7 @@
         android:icon="@drawable/ic_baseline_casino_24"/>
     <item android:title="@string/next_bets"
         android:id="@+id/nextBets"
-        android:icon="@drawable/ic_baseline_home_24"
-        />
+        android:icon="@drawable/ic_baseline_home_24"/>
     <item android:title="@string/my_sold"
         android:id="@+id/myMoney"
         android:icon="@drawable/ic_baseline_attach_money_24"/>

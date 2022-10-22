@@ -3,13 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.NextBets"
+    tools:context=".activitys.MainActivity"
     android:id="@+id/nextBets">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/user_item">
+        tools:listitem="@layout/match_item"
+        android:background="@color/black">
     </androidx.recyclerview.widget.RecyclerView>
 </RelativeLayout>

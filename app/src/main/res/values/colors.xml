@@ -6,4 +6,10 @@
     <color name="darkestBlue">#1A8FDD</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="greyBg">#8B939C</color>
+    <color name="orangeC">#F59516</color>
+    <color name="silverR">#8B939C</color>
+    <color name="yellowH">#FCAD10</color>
+    <color name="red">#983628</color>
 </resources>

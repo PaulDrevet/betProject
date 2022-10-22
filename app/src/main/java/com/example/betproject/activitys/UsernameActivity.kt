@@ -1,21 +1,24 @@
 package com.example.betproject.activitys
 
-import android.content.ContentValues.TAG
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.betproject.R
+import com.example.betproject.repository.UserRepository
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
+import java.util.prefs.Preferences
 
 class UsernameActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-        //supportActionBar?.hide()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_username)
 
         val userName:EditText = findViewById(R.id.input_name)
         val userNameButton: Button = findViewById(R.id.input_name_button)
@@ -31,4 +34,5 @@ class UsernameActivity : AppCompatActivity() {
             }
         }
     }
+
 }

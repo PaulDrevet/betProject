@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.betproject.R
-import com.example.betproject.databinding.ActivityAllBetsBinding
+import com.example.betproject.databinding.ActivityMainBinding
 import com.example.betproject.fragments.MyMoney
 import com.example.betproject.fragments.NextBets
 import com.example.betproject.fragments.YourBets
@@ -12,14 +12,15 @@ import com.example.betproject.fragments.YourBets
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityAllBetsBinding
+    private lateinit var binding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityAllBetsBinding.inflate(layoutInflater)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(NextBets())
+        replaceFragment(YourBets())
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
