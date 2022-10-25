@@ -18,13 +18,16 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/ic_baseline_logout_24"
+                android:onClick="quitApp"
                 android:rotation="180"
-                android:contentDescription="@string/leave"/>
+                android:src="@drawable/ic_baseline_logout_24"
+                android:contentDescription="@string/leave"
+                android:background="@color/yellowH"/>
 
             <ImageView
                 android:layout_width="0dp"
@@ -37,12 +40,14 @@
                 android:contentDescription="@string/LOGO"/>
 
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/imageView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/ic_baseline_account_circle_24"
-                android:contentDescription="@string/LOGO_PROFILE"/>
+                android:contentDescription="@string/LOGO_PROFILE"
+                android:background="@color/yellowH"/>
 
         </LinearLayout>
 
