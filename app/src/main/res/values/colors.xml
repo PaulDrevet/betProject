@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primaryColor">#5497A7</color>
-    <color name="secondaryColor">#78CAD2</color>
-    <color name="thirdColor">#50858B</color>
-    <color name="darkestBlue">#1A8FDD</color>
-    <color name="black">#FF000000</color>
+
     <color name="white">#FFFFFFFF</color>
 
-    <color name="greyBg">#8B939C</color>
-    <color name="orangeC">#F59516</color>
+    <color name="black">#FF000000</color>
+    <color name="orangeC">#C37209</color>
     <color name="silverR">#8B939C</color>
-    <color name="yellowH">#FCAD10</color>
+    <color name="yellowH">#FDBA35</color>
     <color name="red">#983628</color>
 </resources>

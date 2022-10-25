@@ -1,6 +1,5 @@
 package com.example.betproject.repository
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.example.betproject.models.User
 import com.google.firebase.database.*
@@ -12,12 +11,6 @@ class UserRepository {
 
     @Volatile private var INSTANCE : UserRepository ?= null
 
-    fun testInsert(){
-        val database = Firebase.database
-        val myRef = database.getReference("message")
-
-        myRef.setValue("Hello, World!")
-    }
     fun getInstance() : UserRepository{
         return INSTANCE ?: synchronized(this){
             val instance = UserRepository()

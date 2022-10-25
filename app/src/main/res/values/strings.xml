@@ -1,15 +1,17 @@
 <resources>
     <string name="app_name">betProject</string>
     <string name="submit">SUBMIT</string>
-    <string name="connect">CREATE</string>
+    <string name="connect">CONNECT</string>
     <string name="put_name">Username</string>
     <string name="put_password">Password</string>
     <string name="your_bets">Your bets</string>
     <string name="next_bets">Next bets</string>
     <string name="my_sold">My sold</string>
     <string name="leave">Leave app</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="stayConnect">Stay logged in</string>
 
+    <string name="LOGO">logo picture</string>
+    <string name="LOGO_PROFILE">logo profile picture</string>
+    <string name="TEST">test</string>
 
 </resources>

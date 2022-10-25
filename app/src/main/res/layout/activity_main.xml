@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activitys.MainActivity">
+    tools:context=".activities.MainActivity">
 
     <LinearLayout
         android:id="@+id/topLayout"
@@ -33,14 +33,16 @@
                 android:gravity="center"
                 android:layout_weight="5"
                 android:textStyle="bold"
-                android:src="@drawable/logolauncher"/>
+                android:src="@drawable/logolauncher"
+                android:contentDescription="@string/LOGO"/>
 
 
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/ic_baseline_account_circle_24"/>
+                android:src="@drawable/ic_baseline_account_circle_24"
+                android:contentDescription="@string/LOGO_PROFILE"/>
 
         </LinearLayout>
 

@@ -12,9 +12,9 @@ import com.example.betproject.R
 //7SD
 class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
-    private var team1 = arrayOf("test","dadad")
+    private var team1 = arrayOf("test","dada")
     private var cote1 = arrayOf("1.60","1.90")
-    private var team2 = arrayOf("eada","ddda")
+    private var team2 = arrayOf("eada","dada")
     private var cote2 = arrayOf("1.50","1.40")
     private var date = arrayOf("ea","da")
     private var heure = arrayOf("ea","da")

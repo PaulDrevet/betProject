@@ -1,13 +1,13 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.BetProject" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorPrimaryVariant">@color/thirdColor</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/yellowH</item>
+        <item name="colorPrimaryVariant">@color/yellowH</item>
+        <item name="colorOnPrimary">@color/yellowH</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/secondaryColor</item>
-        <item name="colorAccent">@color/darkestBlue</item>
+        <item name="colorSecondary">@color/orangeC</item>
+        <item name="colorAccent">@color/silverR</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
@@ -15,6 +15,6 @@
 
     <style name="BottomNavigationTheme" parent="Theme.AppCompat.Light">
         <item name="colorPrimary">@color/red</item>
-        <item name="android:textColorSecondary">@color/darkestBlue</item>
+        <item name="colorAccent">@color/orangeC</item>
     </style>
 </resources>
