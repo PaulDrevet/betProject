@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orangeC"
-    tools:context=".fragments.YourBets"
-    android:id="@+id/yourBets"
-    tools:ignore="Overdraw">
+    tools:context=".activities.MainActivity"
+    android:id="@+id/yourBets">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBet"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/TEST" />
+        tools:listitem="@layout/match_bet_item"
+        android:background="@color/black">
+    </androidx.recyclerview.widget.RecyclerView>
 
-</FrameLayout>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/submit"
+        android:text="@string/CONFIRM"
+        android:textAlignment="center"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:src="@drawable/ic_baseline_casino_24"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"/>
+</RelativeLayout>

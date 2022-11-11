@@ -16,7 +16,7 @@ class PasswordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_password)
 
-        val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("userPrefs", Context.MODE_PRIVATE)
         val savedPassword = sharedPreferences.getString("password", null)
 
         val userPassword: EditText = findViewById(R.id.input_password)
@@ -32,17 +32,17 @@ class PasswordActivity : AppCompatActivity() {
                 }
 
                 else {
-                    saveData()
+                    saveUserData()
                     val intent = Intent(applicationContext, MainActivity::class.java)
                     startActivity(intent)
                 }
         }
     }
 
-    private fun saveData() {
+    private fun saveUserData() {
         val insertPassword = findViewById<EditText>(R.id.input_password).text.toString()
         val stayConnect = findViewById<SwitchCompat>(R.id.sw_connect)
-        val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("userPrefs", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.apply {
             putString("password", insertPassword)

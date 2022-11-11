@@ -18,15 +18,16 @@ import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
 
+
     lateinit var imageView: ImageView
     private val pickImage = 100
     private var imageUri: Uri? = null
 
-    private lateinit var binding : ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
 
+        super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -48,6 +49,7 @@ class MainActivity : AppCompatActivity() {
             true
         }
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == RESULT_OK && requestCode == pickImage) {
@@ -68,7 +70,5 @@ class MainActivity : AppCompatActivity() {
         this@MainActivity.finishAffinity()
         exitProcess(0)
     }
-
-
 
 }

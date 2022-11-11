@@ -8,4 +8,6 @@
     <color name="silverR">#8B939C</color>
     <color name="yellowH">#FDBA35</color>
     <color name="red">#983628</color>
+    <color name="grey">#808080</color>
+    <color name="green">#40D459</color>
 </resources>

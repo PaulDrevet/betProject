@@ -45,6 +45,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
                 android:src="@drawable/ic_baseline_account_circle_24"
                 android:contentDescription="@string/LOGO_PROFILE"
                 android:background="@color/yellowH"/>

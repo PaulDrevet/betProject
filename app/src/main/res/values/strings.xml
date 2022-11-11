@@ -13,5 +13,7 @@
     <string name="LOGO">logo picture</string>
     <string name="LOGO_PROFILE">logo profile picture</string>
     <string name="TEST">test</string>
+    <string name="VS">VS</string>
+    <string name="CONFIRM">CONFIRM</string>
 
 </resources>
