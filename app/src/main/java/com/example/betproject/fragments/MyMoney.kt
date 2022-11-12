@@ -1,16 +1,18 @@
 package com.example.betproject.fragments
 
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.telephony.SmsManager
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ProgressBar
-import android.widget.TextView
+import android.widget.*
 import com.example.betproject.R
 
 class MyMoney : Fragment() {
@@ -65,7 +67,6 @@ class MyMoney : Fragment() {
         solde += 100
         editor.putInt("solde", solde).apply()
         refeshPage(view,context)
-
     }
 
     private fun refeshPage(view: View, context: Context){
@@ -87,5 +88,10 @@ class MyMoney : Fragment() {
         soldeText.text = "${solde}€"
         profitText.text = "${profit}€"
 
+    }
+
+    private fun sendSMS(phoneNumber: String, message: String, context: Context) {
+        val sentPI: PendingIntent = PendingIntent.getBroadcast(context, 0, Intent("SMS_SENT"), 0)
+        SmsManager.getDefault().sendTextMessage(phoneNumber, null, message, sentPI, null)
     }
 }

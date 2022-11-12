@@ -13,7 +13,7 @@
         android:layout_height="80dp"
         app:layout_constraintTop_toTopOf="parent"
         android:baselineAligned="false"
-        android:background="@color/grey">
+        android:background="@color/black">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -35,7 +35,9 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     tools:ignore="NestedWeights"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textColor="@color/yellowH"
+                    android:layout_marginStart="15dp"/>
 
                 <TextView
                     android:id="@+id/bet_vs"
@@ -44,7 +46,9 @@
                     android:layout_height="wrap_content"
                     android:text="@string/VS"
                     android:gravity="center"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:textColor="@color/yellowH"
+                    android:layout_marginStart="15dp"/>
 
                 <TextView
                     android:id="@+id/bet_team2"
@@ -54,7 +58,9 @@
                     android:text="@string/TEST"
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textColor="@color/yellowH"
+                    android:layout_marginStart="15dp"/>
 
 
             </LinearLayout>
@@ -66,7 +72,7 @@
             android:layout_marginLeft="28dp"
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/black" />
+            android:background="@color/yellowH"/>
 
 
         <LinearLayout
@@ -83,7 +89,8 @@
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"/>
+                android:layout_marginStart="15dp"
+                android:textColor="@color/yellowH"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -100,7 +107,7 @@
                     android:textStyle="bold"
                     android:background="@drawable/round_corner_green"
                     android:layout_marginStart="30dp"
-                    android:layout_marginEnd="30dp" />
+                    android:layout_marginEnd="30dp"/>
                 <TextView
                     android:id="@+id/bet_amount_loose"
                     android:layout_width="wrap_content"
@@ -121,16 +128,25 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2">
+            android:layout_weight="2"
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/deleteButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_delete_forever_24"
-                android:background="@color/grey"
+                android:background="@color/black"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"/>
+
+            <ImageButton
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_share_24"
+                android:background="@color/grey"
+                android:layout_gravity="center"/>
         </LinearLayout>
 
         </LinearLayout>

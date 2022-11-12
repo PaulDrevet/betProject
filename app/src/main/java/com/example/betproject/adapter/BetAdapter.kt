@@ -3,6 +3,9 @@ package com.example.betproject.adapter
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
+import android.content.Intent
+import android.media.Image
+import android.net.Uri
 import android.text.InputType
 import android.util.Log
 import android.view.LayoutInflater
@@ -42,6 +45,11 @@ class BetAdapter (private var listMatch : List<Match>, private var listBet : Lis
             notifyDataSetChanged()
         }
 
+        holder.share.setOnClickListener(){
+            shareBet(position, it)
+            notifyDataSetChanged()
+        }
+
 
     }
 
@@ -56,6 +64,7 @@ class BetAdapter (private var listMatch : List<Match>, private var listBet : Lis
         val bet_loose_amount : TextView = itemView.findViewById(R.id.bet_amount_loose)
         val bet_win_amount : TextView = itemView.findViewById(R.id.bet_amount_win)
         val delete : ImageButton = itemView.findViewById(R.id.deleteButton)
+        val share : ImageButton = itemView.findViewById(R.id.share)
 
     }
 
@@ -71,6 +80,26 @@ class BetAdapter (private var listMatch : List<Match>, private var listBet : Lis
         val type = object : TypeToken<List<Bet>>() {}.type
         val editor = sharedPref.edit()
         editor.putString("bet",jsonString).apply()
+
+        val uri = Uri.parse("smsto:12346556")
+        val intent = Intent(Intent.ACTION_SENDTO, uri)
+        intent.putExtra("sms_body", "hdahda")
+        it.context.startActivity(intent)
+    }
+    private fun shareBet(position: Int, it : View){
+
+        val team1 = listMatch[listBet[position].id!!].team1
+        val team2 = listMatch[listBet[position].id!!].team2
+        val pari = listBet[position].lose_amount
+        val teamParie = listBet[position].team
+        val s = "J'ai parié ${pari}€ sur $teamParie dans le match $team1 vs $team2 "
+
+        val shareIntent = Intent()
+        shareIntent.action = Intent.ACTION_SEND
+        shareIntent.type = "text/plain"
+        shareIntent.putExtra(Intent.EXTRA_TEXT, s)
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Voila mon pari pour ce match: ")
+        it.context.startActivity(Intent.createChooser(shareIntent, "Share bet via :"))
 
     }
 }

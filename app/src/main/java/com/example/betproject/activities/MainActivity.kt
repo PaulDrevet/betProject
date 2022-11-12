@@ -1,12 +1,15 @@
 package com.example.betproject.activities
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import com.example.betproject.R
 import com.example.betproject.databinding.ActivityMainBinding
@@ -36,6 +39,13 @@ class MainActivity : AppCompatActivity() {
             val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
             startActivityForResult(gallery, pickImage)
         }
+        val sharedPref = getSharedPreferences("usersPref", Context.MODE_PRIVATE)
+        val imageString = sharedPref.getString("picture","")
+        Log.i("better",imageString.toString())
+
+        if (imageString != ""){
+            imageView.setImageURI(imageString?.toUri())
+        }
 
         replaceFragment(YourBets())
         binding.bottomNavigationView.setOnItemSelectedListener {
@@ -55,6 +65,9 @@ class MainActivity : AppCompatActivity() {
         if (resultCode == RESULT_OK && requestCode == pickImage) {
             imageUri = data?.data
             imageView.setImageURI(imageUri)
+
+            val sharedPref = getSharedPreferences("usersPref", Context.MODE_PRIVATE)
+            sharedPref.edit().putString(imageUri.toString(),"picture").apply()
         }
     }
 
@@ -70,5 +83,4 @@ class MainActivity : AppCompatActivity() {
         this@MainActivity.finishAffinity()
         exitProcess(0)
     }
-
 }
