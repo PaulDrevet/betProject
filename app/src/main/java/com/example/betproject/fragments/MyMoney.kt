@@ -90,8 +90,4 @@ class MyMoney : Fragment() {
 
     }
 
-    private fun sendSMS(phoneNumber: String, message: String, context: Context) {
-        val sentPI: PendingIntent = PendingIntent.getBroadcast(context, 0, Intent("SMS_SENT"), 0)
-        SmsManager.getDefault().sendTextMessage(phoneNumber, null, message, sentPI, null)
-    }
 }

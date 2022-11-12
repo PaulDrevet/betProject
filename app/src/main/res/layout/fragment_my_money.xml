@@ -16,7 +16,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:id="@+id/reset_button"
@@ -24,81 +25,73 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="135dp"
                 android:layout_marginEnd="135dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:contentDescription="@string/submit"
                 android:src="@drawable/ic_baseline_casino_24"
                 android:text="RESET STATS"
-                android:textAlignment="center"/>
+                android:textAlignment="center" />
 
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/yellowH"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="3.5"
             android:orientation="vertical"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="30dp"
+            >
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:text="BALANCE"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:textColor="@color/white"/>
+                android:textColor="@color/yellowH"/>
 
             <TextView
                 android:id="@+id/sold_textView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/TEST"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:textSize="20sp"
+                android:text="@string/TEST"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:textColor="@color/white"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginBottom="10dp"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/yellowH"
-                android:layout_marginTop="10dp" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="BENEFITS"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:textSize="25sp"
+                android:text="BENEFITS"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/yellowH"
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:id="@+id/profit_textView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/TEST"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:textSize="20sp"
+                android:text="@string/TEST"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:textColor="@color/white"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginBottom="10dp"/>
+
 
 
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/yellowH"
-            android:layout_marginTop="10dp"/>
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -113,7 +106,7 @@
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:textColor="@color/white"
+                android:textColor="@color/yellowH"
                 android:layout_marginTop="20dp"
                 app:layout_constraintVertical_bias="0.7"/>
 
@@ -146,13 +139,6 @@
                 android:textColor="@color/white"
                 app:layout_constraintVertical_bias="0.6"
                 />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/yellowH"
-                android:layout_marginTop="10dp"
-                app:layout_constraintBottom_toBottomOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

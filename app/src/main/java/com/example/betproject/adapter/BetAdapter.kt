@@ -80,11 +80,6 @@ class BetAdapter (private var listMatch : List<Match>, private var listBet : Lis
         val type = object : TypeToken<List<Bet>>() {}.type
         val editor = sharedPref.edit()
         editor.putString("bet",jsonString).apply()
-
-        val uri = Uri.parse("smsto:12346556")
-        val intent = Intent(Intent.ACTION_SENDTO, uri)
-        intent.putExtra("sms_body", "hdahda")
-        it.context.startActivity(intent)
     }
     private fun shareBet(position: Int, it : View){
 

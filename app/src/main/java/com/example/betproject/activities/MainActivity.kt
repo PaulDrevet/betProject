@@ -40,8 +40,11 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(gallery, pickImage)
         }
         val sharedPref = getSharedPreferences("usersPref", Context.MODE_PRIVATE)
-        val imageString = sharedPref.getString("picture","")
+        val imageString = sharedPref.getString("picture","dada")
+        Log.i("better","sisi")
         Log.i("better",imageString.toString())
+        Log.i("better","s2s2")
+
 
         if (imageString != ""){
             imageView.setImageURI(imageString?.toUri())
@@ -67,6 +70,7 @@ class MainActivity : AppCompatActivity() {
             imageView.setImageURI(imageUri)
 
             val sharedPref = getSharedPreferences("usersPref", Context.MODE_PRIVATE)
+            Log.i("better",imageUri.toString())
             sharedPref.edit().putString(imageUri.toString(),"picture").apply()
         }
     }
