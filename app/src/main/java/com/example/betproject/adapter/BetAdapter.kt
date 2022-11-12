@@ -35,7 +35,6 @@ class BetAdapter (private var listMatch : List<Match>, private var listBet : Lis
         holder.bet_loose_amount.text = listBet[position].lose_amount.toString()
         holder.bet_team1.text = listMatch[listBet[position].id!!].team1
         holder.bet_team2.text = listMatch[listBet[position].id!!].team2
-        holder.bet_date.text = listMatch[listBet[position].id!!].date
 
         holder.delete.setOnClickListener(){
             deleteBet(position, it)
@@ -51,7 +50,6 @@ class BetAdapter (private var listMatch : List<Match>, private var listBet : Lis
     }
 
     class BetViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-        val bet_date : TextView = itemView.findViewById(R.id.bet_date)
         val bet_team1 : TextView = itemView.findViewById(R.id.bet_team1)
         val bet_team2 : TextView = itemView.findViewById(R.id.bet_team2)
         val teambet : TextView = itemView.findViewById(R.id.bet_teambet)
