@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
@@ -109,22 +110,27 @@ class YourBets : Fragment() {
                 profit -= bet.lose_amount!!
             }
         }
-        nbWin += sharedPref.getInt("nb_win",0)
-        nbBet += sharedPref.getInt("nb_bet",0)
-        solde += profit
-        profit += sharedPref.getInt("profit",0)
-        Log.i("better",nbBet.toString())
-        Log.i("better",nbWin.toString())
+        if (solde+profit > 0) {
+            nbWin += sharedPref.getInt("nb_win", 0)
+            nbBet += sharedPref.getInt("nb_bet", 0)
+            solde += profit
+            profit += sharedPref.getInt("profit", 0)
+            Log.i("better", nbBet.toString())
+            Log.i("better", nbWin.toString())
 
-        editor.putInt("nb_win", nbWin).apply()
-        editor.putInt("nb_bet", nbBet).apply()
-        editor.putInt("profit", profit).apply()
-        editor.putInt("solde", solde).apply()
+            editor.putInt("nb_win", nbWin).apply()
+            editor.putInt("nb_bet", nbBet).apply()
+            editor.putInt("profit", profit).apply()
+            editor.putInt("solde", solde).apply()
 
-        val sisi = sharedPref.getInt("nb_win",0)
-        Log.i("better",sisi.toString())
+            val sisi = sharedPref.getInt("nb_win", 0)
+            Log.i("better", sisi.toString())
 
-        resetList(context)
+            resetList(context)
+        }
+        else {
+            Toast.makeText(context,"Not enough money",Toast.LENGTH_SHORT).show()
+        }
 
     }
 }

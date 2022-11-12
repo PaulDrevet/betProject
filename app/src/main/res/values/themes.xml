@@ -6,7 +6,7 @@
         <item name="colorPrimaryVariant">@color/yellowH</item>
         <item name="colorOnPrimary">@color/yellowH</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/orangeC</item>
+        <item name="colorSecondary">@color/yellowH</item>
         <item name="colorAccent">@color/silverR</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
