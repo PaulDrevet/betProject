@@ -26,23 +26,21 @@
                 android:layout_marginEnd="135dp"
                 android:layout_marginTop="20dp"
                 android:contentDescription="@string/submit"
-
                 android:src="@drawable/ic_baseline_casino_24"
                 android:text="RESET STATS"
-                android:textAlignment="center" />
+                android:textAlignment="center"/>
 
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/yellowH"
-            android:layout_marginTop="10dp"/>
+            android:background="@color/yellowH"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4"
+            android:layout_weight="3.5"
             android:orientation="vertical"
             android:layout_marginTop="10dp">
 
@@ -116,7 +114,8 @@
                 android:textStyle="bold"
                 android:gravity="center"
                 android:textColor="@color/white"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                app:layout_constraintVertical_bias="0.7"/>
 
 
             <ProgressBar
@@ -130,7 +129,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.7"/>
 
             <TextView
                 android:id="@+id/text_view_progress"
@@ -143,7 +143,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 tools:text="60%"
                 android:textSize="35sp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                app:layout_constraintVertical_bias="0.6"
+                />
 
             <View
                 android:layout_width="match_parent"
