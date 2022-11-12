@@ -98,19 +98,32 @@ class YourBets : Fragment() {
         var nbWin : Int = 0
         var nbBet : Int = listBet.size
         var profit : Int = 0
+        var solde : Int = sharedPref.getInt("solde",0)
 
-        Log.i("better",listBet.toString())
         listBet.forEach{ bet ->
             if (bet.win == 1){
                 nbWin += 1
                 profit += bet.win_amount!!
-                Log.i("better",nbWin.toString())
+            }
+            else {
+                profit -= bet.lose_amount!!
             }
         }
         nbWin += sharedPref.getInt("nb_win",0)
         nbBet += sharedPref.getInt("nb_bet",0)
-        editor.putInt("nb_win", nbWin)
-        editor.putInt("nb_bet", nbBet)
+        solde += profit
+        profit += sharedPref.getInt("profit",0)
+        Log.i("better",nbBet.toString())
+        Log.i("better",nbWin.toString())
+
+        editor.putInt("nb_win", nbWin).apply()
+        editor.putInt("nb_bet", nbBet).apply()
+        editor.putInt("profit", profit).apply()
+        editor.putInt("solde", solde).apply()
+
+        val sisi = sharedPref.getInt("nb_win",0)
+        Log.i("better",sisi.toString())
+
         resetList(context)
 
     }

@@ -6,22 +6,25 @@
             android:thicknessRatio="16"
             android:useLevel="false">
             <solid
-                android:color="@color/black"></solid>
+                android:color="@color/red"></solid>
 
         </shape>
     </item>
 
     <item>
-        <shape
-            android:shape="ring"
-            android:thicknessRatio="16"
-            android:useLevel="true">
-            <solid
-                android:color="@color/green">
+        <rotate
+            android:fromDegrees="270"
+            android:toDegrees="270">
+            <shape
+                android:shape="ring"
+                android:thicknessRatio="16"
+                android:useLevel="true">
+                <solid
+                    android:color="@color/green">
+                </solid>
 
-            </solid>
-
-        </shape>
+            </shape>
+        </rotate>
     </item>
 
 </layer-list>

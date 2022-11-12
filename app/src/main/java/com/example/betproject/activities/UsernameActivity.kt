@@ -89,6 +89,13 @@ class UsernameActivity : AppCompatActivity() {
         editor.apply{
             putString("username",insertName)
         }.apply()
+
+        val sharedPreferences2 = getSharedPreferences("stats",Context.MODE_PRIVATE)
+        val editor2 = sharedPreferences2.edit()
+        val solde = sharedPreferences2.getInt("solde",-1)
+        if (solde == -1){
+            editor2.putInt("solde",1000).apply()
+        }
     }
 
     private fun loadUserData(){
